@@ -1,0 +1,111 @@
+/* ===============================
+   VARIABLES DE COLOR Y TIPOGRAFÍA
+================================= */
+:root {
+  /* Colores */
+  --color-base: #F5E6D3;        /* Alabastro Cálido - fondo principal */
+  --color-primario: #A0522D;    /* Siena Tostado - títulos, CTA */
+  --color-acento: #87A96B;      /* Verde Salvia - detalles secundarios */
+  --color-premium: #D4A437;     /* Vara de Oro - acentos premium */
+  --color-suave: #C47A6D;       /* Rosa Polvoriento - acentos suaves */
+  
+  /* Tipografía */
+  --font-body: 'Inter', sans-serif;
+  --font-title: 'Playfair Display', serif;
+}
+
+/* ===============================
+   ESTILOS GENERALES
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-base);
+  color: var(--color-primario);
+  line-height: 1.6;
+}
+
+/* ===============================
+   TIPOGRAFÍA
+================================= */
+h1, h2, h3, h4 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-primario);
+}
+
+
+
+/* ===============================
+   CLASES DE UTILIDAD
+================================= */
+.text-center {
+  text-align: center;
+}
+
+
+/* ===============================
+   IMÁGENES RESPONSIVAS
+================================= */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ===============================
+   BOTONES / CTA
+================================= */
+
+/* Botón primario */
+/* Botón secundario */
+
+
+
+
+/* ===============================
+   HEADER Y NAVBAR
+================================= */
+header {
+  background-color: var(--color-base);
+  padding: 1rem 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-primario);
+  font-weight: 500;
+}
+
+/* ===============================
+   FOOTER
+================================= */
+footer {
+  background-color: var(--color-primario);
+  color: var(--color-base);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+
+
