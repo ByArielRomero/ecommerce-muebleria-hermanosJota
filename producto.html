@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <title>Producto</title>
+  </head>
+  <body>
+    <!--HEADER-->
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__logo">
+          <img
+            src="./assets/img/logo.svg"
+            alt="logo hermanos jota"
+            class="header__logo-img"
+          />
+        </div>
+
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a
+                href="./index.html"
+                class="navbar__link--active navbar__link"
+                >Inicio</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="./productos.html" class="navbar__link--active">Productos</a>
+            </li>
+            <li class="navbar__item">
+              <a href="./contacto.html" class="navbar__link">Contacto</a>
+            </li>
+          </ul>
+          <div class="navbar__carrito">
+            <a class="navbar__carrito-btn" aria-label="Ver carrito de compras">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="header__carrito-contador">0</span>
+            </a>
+          </div>
+
+          <!-- Buscador -->
+          <div class="navbar__buscador">
+            <a class="navbar__buscador-btn" aria-label="Buscar productos">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!--MAIN-->
+    <main></main>
+
+    <!--FOOTER-->
+    <footer class="footer">
+      <!--NEWSLETTER CORREO-->
+      <div class="footer__info">
+        <h2 class="footer__title">Newsletter</h2>
+        <p>
+          Suscribite a nuestro Newsletter y recibi novedades de descuentos y
+          nuevos productos.
+        </p>
+
+        <form class="footer__form">
+          <input type="email" placeholder="Ingresa tu email" required />
+          <div>
+            <button type="submit">Suscribirse</button>
+          </div>
+        </form>
+      </div>
+
+      <!--CATEGORIAS, AYUDA Y CONTACTO-->
+      <div class="footer__container container">
+        <div class="footer__categorias">
+          <h2>Categorias</h2>
+          <ul class="footer__categories-list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Muebles</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Cocina</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Baño</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Deco Hogar</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Escritorio</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__ayuda">
+          <h2>Ayuda</h2>
+          <ul>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Sucursales</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Preguntas frecuentes</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Terminos y condiciones</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Trabaja con nosotros</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Boton de arrepentimiento</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__contacto">
+          <h2>Contacto</h2>
+          <ul>
+            <li class="footer__item">
+              <a class="footer__link" href="#">+54 11 4567-8900</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">info@hermanosjota.com.ar</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">ventas@hermanosjota.com.ar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- FOOTER REDES SOCIALES -->
+      <div class="footer__redes-sociales">
+        <a
+          href="https://www.facebook.com/HermanosJotaMuebleria"
+          target="_blank"
+          class="footer__icon-link"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/hermanosjota/"
+          target="_blank"
+          class="footer__icon-link"
+        >
+          <i class="fab fa-instagram"></i>
+          @hermanosjota_ba
+        </a>
+      </div>
+
+      <div class="footer__derechos-reservados">
+        <p>© 2025 Hermanos Jota. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

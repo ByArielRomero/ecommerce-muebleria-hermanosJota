@@ -3,44 +3,53 @@
 ================================= */
 :root {
   /* Colores */
-  --color-base: #F5E6D3;        /* Alabastro Cálido - fondo principal */
-  --color-primario: #A0522D;    /* Siena Tostado - títulos, CTA */
-  --color-acento: #87A96B;      /* Verde Salvia - detalles secundarios */
-  --color-premium: #D4A437;     /* Vara de Oro - acentos premium */
-  --color-suave: #C47A6D;       /* Rosa Polvoriento - acentos suaves */
-  
+  --color-base: #f5e6d3; /* Alabastro Cálido - fondo principal */
+  --color-primario: #a0522d; /* Siena Tostado - títulos, CTA */
+  --color-acento: #87a96b; /* Verde Salvia - detalles secundarios */
+  --color-premium: #d4a437; /* Vara de Oro - acentos premium */
+  --color-suave: #c47a6d; /* Rosa Polvoriento - acentos suaves */
+
   /* Tipografía */
-  --font-body: 'Inter', sans-serif;
-  --font-title: 'Playfair Display', serif;
+  --font-body: "Inter", sans-serif;
+  --font-title: "Playfair Display", serif;
 }
 
 /* ===============================
    ESTILOS GENERALES
 ================================= */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
   font-family: var(--font-body);
   background-color: var(--color-base);
   color: var(--color-primario);
-  line-height: 1.6;
+  line-height: 1.6; /* Espacio entre líneas */
 }
 
+.container {
+  max-width: 1200px; /* ancho máximo */
+  margin: 0 auto; /* centra horizontalmente */
+  padding: 0 1rem; /* espacio interno lateral */
+}
 /* ===============================
    TIPOGRAFÍA
 ================================= */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-title);
   font-weight: 700;
   letter-spacing: 0.1em;
   color: var(--color-primario);
 }
-
-
 
 /* ===============================
    CLASES DE UTILIDAD
@@ -48,7 +57,6 @@ h1, h2, h3, h4 {
 .text-center {
   text-align: center;
 }
-
 
 /* ===============================
    IMÁGENES RESPONSIVAS
@@ -67,15 +75,27 @@ img {
 /* Botón primario */
 /* Botón secundario */
 
-
-
+/* ===============================*/
 
 /* ===============================
    HEADER Y NAVBAR
 ================================= */
-header {
+.header {
   background-color: var(--color-base);
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
+  position: sticky; /*SE QUEDA FIJO AL HACER SCROLL*/
+  top: 0; /*SE PEGUE ARRIBA*/
+  z-index: 1000; /*PARA QUE SE PONGA POR ARRIBA DE TODOS LOS ELEMENTOS*/
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /*SOMBRA ABAJO MUY SUTIL*/
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  width: 120px;
 }
 
 .navbar {
@@ -84,28 +104,156 @@ header {
   align-items: center;
 }
 
-.nav-links {
-  list-style: none;
+.navbar__list {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: var(--color-primario);
+.navbar__link {
+  color: black;
   font-weight: 500;
 }
+
+.navbar__link--active {
+  color: var(--color-acento);
+  font-weight: 500;
+}
+
+.navbar__carrito {
+  margin: 1rem;
+}
+
+
+
+
+/* ===============================
+   MAIN
+================================= */
+
+main {
+  height: 50vh;
+}
+
+
+
+
+/* ===============================
+   RESTO DEL CODIGO
+================================= */
+
 
 /* ===============================
    FOOTER
 ================================= */
-footer {
-  background-color: var(--color-primario);
-  color: var(--color-base);
+
+.footer {
+  background-color: var(--color-base);
   text-align: center;
-  padding: 2rem 1rem;
   font-size: 0.9rem;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.footer__info {
+ background-color: #1a1a1a;
+ color: white;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer__info input {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+}
+
+.footer__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer__form button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-acento);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.footer__form button:hover {
+  color: var(--color-premium); 
+}
+
+.footer__item .footer__link {
+  color: var(--color-acento);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer__redes-sociales a {
+  color: black;
+}
+
+.footer__categorias,
+.footer__ayuda,
+.footer__contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.footer__derechos-reservados {
+  padding: 1rem;
 }
 
 
 
+/* ===============================
+   MEDIA QUERIES
+================================= */
+
+@media (min-width: 769px) {
+  
+  /*HEADER*/
+  
+
+  /*FOOTER*/
+  
+  .footer {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+
+.footer__info input{
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .footer__container {
+    flex-direction: row;
+  }
+
+  .footer__categorias,
+  .footer__ayuda,
+  .footer__contacto {
+    flex: 1;
+  }
+
+
+}
+  
