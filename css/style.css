@@ -1,3 +1,104 @@
+
+/* PRODUCTOS DESTACADOS PROFESIONAL Y RESPONSIVO */
+.destacados {
+  margin-bottom: 3rem;
+}
+.destacados__title {
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 2rem;
+  letter-spacing: 0.04em;
+}
+.destacados__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+.destacado-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(160,82,45,0.10);
+  padding: 1.7rem 1.1rem 1.3rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+  min-height: 340px;
+}
+.destacado-card:hover, .destacado-card:focus-within {
+  box-shadow: 0 8px 32px rgba(160,82,45,0.18);
+  transform: translateY(-6px) scale(1.03);
+  z-index: 2;
+}
+.destacado-card__img {
+  width: 100%;
+  max-width: 180px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(160,82,45,0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.destacado-card:hover .destacado-card__img,
+.destacado-card:focus-within .destacado-card__img {
+  transform: scale(1.07) rotate(2deg);
+  box-shadow: 0 8px 32px rgba(160,82,45,0.18);
+}
+.destacado-card__nombre {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primario);
+  text-align: center;
+}
+.destacado-card__desc {
+  font-size: 1rem;
+  color: var(--color-suave);
+  margin-bottom: 0.7rem;
+  text-align: center;
+  min-height: 48px;
+}
+.destacado-card__precio {
+  font-size: 1.1rem;
+  color: var(--color-premium);
+  font-weight: bold;
+  margin-top: 0.5rem;
+  letter-spacing: 0.03em;
+}
+.destacado-card::after {
+  content: "★";
+  color: var(--color-premium);
+  font-size: 2.2rem;
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  opacity: 0.13;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.destacado-card:hover::after, .destacado-card:focus-within::after {
+  opacity: 0.28;
+}
+
+@media (max-width: 500px) {
+  .hero-banner {
+    padding: 2.2rem 0 1.5rem 0;
+    min-height: 220px;
+  }
+  .hero-banner__img-container {
+    max-width: 180px;
+  }
+  .destacado-card {
+    min-height: 260px;
+    padding: 1.1rem 0.5rem 1rem 0.5rem;
+  }
+  .destacado-card__img {
+    max-width: 110px;
+    height: 80px;
+  }
+}
 /* ===============================
    VARIABLES DE COLOR Y TIPOGRAFÍA
 ================================= */
@@ -126,16 +227,377 @@ img {
 
 
 
+
 /* ===============================
-   MAIN
+  SECCIÓN MAIN: HERO (BANNER) Y PRODUCTOS DESTACADOS
+  Comentarios de una línea para cada bloque
 ================================= */
 
 main {
-  height: 50vh;
+  height: auto; /* El main ocupa altura automática */
 }
 
+/* Banner principal con imagen y texto */
+.hero {
+  width: 100%; /* Ocupa todo el ancho */
+  min-height: 70vh; /* Altura mínima del banner */
+  display: flex; /* Centra verticalmente */
+  align-items: center;
+  background: linear-gradient(90deg, #f5e6d3 60%, #fffbe9 100%); /* Fondo degradado */
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+/* Contenedor grid para dividir texto e imagen */
+.hero__container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr; /* Dos columnas: texto e imagen */
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+}
+/* Contenido textual del banner */
+.hero__content {
+  max-width: 520px;
+  z-index: 2;
+  padding: 2rem 0 2rem 1rem;
+}
+/* Título principal del banner */
+.hero__title {
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  font-family: var(--font-title);
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  color: var(--color-primario);
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-shadow: 0 2px 8px #fffbe9;
+}
+/* Subtítulo del banner */
+.hero__subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: var(--color-suave);
+  margin-bottom: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+/* Botón de llamada a la acción en el banner */
+.hero__btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--color-premium) 0%, var(--color-acento) 100%);
+  color: #fff;
+  padding: 1.2rem 3.2rem;
+  border-radius: 40px;
+  font-size: 1.35rem;
+  font-weight: bold;
+  box-shadow: 0 6px 24px rgba(160,82,45,0.18);
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  outline: none;
+  margin-top: 1.2rem;
+  border: none;
+  cursor: pointer;
+  text-shadow: 0 1px 8px #fffbe9;
+  box-sizing: border-box;
+  animation: cta-pulse 1.5s infinite alternate;
+}
+/* Efecto hover/focus en el botón del banner */
+.hero__btn:hover, .hero__btn:focus {
+  background: linear-gradient(90deg, var(--color-acento) 0%, var(--color-premium) 100%);
+  color: var(--color-primario);
+  box-shadow: 0 12px 32px rgba(160,82,45,0.22);
+  transform: translateY(-4px) scale(1.08);
+  animation: none;
+}
+/* Animación de pulso para el botón CTA */
+@keyframes cta-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(160,82,45,0.10);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 0 12px rgba(160,82,45,0.04);
+    transform: scale(1.04);
+  }
+}
+/* Contenedor de la imagen del banner */
+.hero__image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  position: relative;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  height: 100%;
+}
+/* Imagen principal del banner */
+.hero__img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  max-height: 320px;
+  aspect-ratio: 2.2/1;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: transparent;
+  margin: 0 auto;
+  display: block;
+}
+/* Efecto hover/focus en la imagen del banner */
+.hero__image:hover .hero__img,
+.hero__image:focus-within .hero__img {
+  transform: scale(1.04) rotate(-2deg);
+  box-shadow: 0 12px 40px rgba(160,82,45,0.18);
+}
 
+/* --- RESPONSIVE HERO --- */
+@media (max-width: 900px) {
+  .hero__container {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas chicas */
+    grid-template-rows: auto auto;
+    height: auto;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .hero__content {
+    padding: 2.5rem 1.5rem 0 1.5rem; /* Más padding lateral en tablet */
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .hero__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 0.7rem 0 2.5rem 0; /* Más espacio abajo para separar */
+    height: auto;
+  }
+  .hero__img {
+    max-width: 420px;
+    width: 60vw;
+    min-width: 220px;
+    height: auto;
+    aspect-ratio: 2.2/1;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 8px 32px rgba(160,82,45,0.10); /* Sombra sutil para destacar */
+    border-radius: 1.2rem;
+    background: #fffbe9;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    min-height: 0; /* Elimina altura mínima en móvil */
+    padding: 0.5rem 0 0.5rem 0;
+  }
+  .hero__content {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    font-size: 1rem;
+  }
+  .hero__title {
+    font-size: 2rem;
+  }
+  .hero__subtitle {
+    font-size: 1.1rem;
+  }
+  .hero__btn {
+    font-size: 1.05rem;
+    padding: 0.9rem 1.5rem;
+    margin-top: 0.7rem;
+  }
+  .hero__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 0.2rem;
+    height: auto;
+  }
+  .hero__img {
+    max-width: 95vw;
+    width: 95vw;
+    min-width: 120px;
+    height: auto;
+    aspect-ratio: 2.2/1;
+    margin: 0 auto;
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .hero {
+    padding: 1.2rem 0 0.5rem 0;
+    min-height: 180px;
+  }
+  .hero__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 0.1rem;
+    height: auto;
+  }
+  .hero__img {
+    max-width: 98vw;
+    width: 98vw;
+    min-width: 100px;
+    height: auto;
+    aspect-ratio: 2.2/1;
+    margin: 0 auto;
+    display: block;
+  }
+}
 
+/* Sección de productos destacados */
+.productos-destacados {
+  padding: 2.5rem 0 3rem 0; /* Espaciado arriba y abajo */
+  text-align: center; /* Centra el texto */
+  background: linear-gradient(180deg, #fffbe9 0%, #f5e6d3 100%); /* Fondo degradado */
+  border-radius: 0 0 2.5rem 2.5rem; /* Bordes redondeados abajo */
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 32px 0 rgba(160,82,45,0.07); /* Sombra sutil */
+  position: relative;
+  z-index: 1;
+}
+/* Contenedor de la sección productos destacados */
+.productos-destacados__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Título de la sección productos destacados */
+.productos-destacados__title {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 2rem;
+  color: var(--color-primario);
+  letter-spacing: 0.04em;
+}
+/* Grid de tarjetas de productos */
+.productos-destacados__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Grid responsivo */
+  gap: 2rem;
+  width: 100%;
+}
+/* Tarjeta individual de producto */
+.producto-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(160,82,45,0.10);
+  padding: 1.7rem 1.1rem 1.3rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+  min-height: 340px;
+}
+/* Efecto hover/focus en la tarjeta de producto */
+.producto-card:hover, .producto-card:focus-within {
+  box-shadow: 0 8px 32px rgba(160,82,45,0.18);
+  transform: translateY(-6px) scale(1.03);
+  z-index: 2;
+}
+/* Imagen del producto en la tarjeta */
+.producto-card__img {
+  width: 100%;
+  max-width: 180px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(160,82,45,0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+/* Efecto hover/focus en la imagen del producto */
+.producto-card:hover .producto-card__img,
+.producto-card:focus-within .producto-card__img {
+  transform: scale(1.07) rotate(2deg);
+  box-shadow: 0 8px 32px rgba(160,82,45,0.18);
+}
+/* Título del producto */
+.producto-card__title {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  color: var(--color-primario);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+/* Precio del producto */
+.producto-card__price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-acento);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.03em;
+}
+/* Botón de agregar al carrito */
+.producto-card__btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  background: linear-gradient(90deg, var(--color-acento), var(--color-premium));
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+  outline: none;
+}
+/* Efecto hover/focus en el botón de la tarjeta */
+.producto-card__btn:hover, .producto-card__btn:focus {
+  background: linear-gradient(90deg, var(--color-premium), var(--color-acento));
+  color: var(--color-primario);
+  box-shadow: 0 4px 24px rgba(160,82,45,0.18);
+  transform: translateY(-3px) scale(1.04);
+}
+/* Estrella decorativa en la tarjeta */
+.producto-card::after {
+  content: "★";
+  color: var(--color-premium);
+  font-size: 2.2rem;
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  opacity: 0.13;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+/* Efecto hover/focus en la estrella decorativa */
+.producto-card:hover::after, .producto-card:focus-within::after {
+  opacity: 0.28;
+}
+/* --- RESPONSIVE PRODUCTOS DESTACADOS --- */
+@media (max-width: 500px) {
+  .productos-destacados {
+    padding: 2.2rem 0 1.2rem 0; /* Menos padding en móvil */
+    border-radius: 1.2rem;
+  }
+  .producto-card {
+    min-height: 220px; /* Tarjetas más compactas en móvil */
+    padding: 1.1rem 0.5rem 1rem 0.5rem;
+  }
+  .producto-card__img {
+    max-width: 110px;
+    height: 80px;
+  }
+}
+/* === FIN MAIN === */
 
 /* ===============================
    RESTO DEL CODIGO
