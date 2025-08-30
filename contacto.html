@@ -57,7 +57,37 @@
     </header>
 
     <!--MAIN-->
-    <main></main>
+    <main>
+
+      <section class="contact-form-section">
+        <form action="https://formspree.io/f/mrbaqlrd" method="POST" class="contact-form">
+
+            <h2 class="contact-form__title">Contactanos</h2>
+
+            <div class="contact-form__group">
+
+            <label for="name" class="contact-form__label">Nombre</label>
+            <input type="text" name="name" id="name" placeholder="Nombre..." class="contact-form__input">
+
+            <label for="email" class="contact-form__label">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email..." class="contact-form__input">
+
+            <label for="mensaje" class="contact-form__label">Mensaje</label>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Mensaje..." class="contact-form__textarea"></textarea>
+
+                <div class="contact-form__txt">
+                  <a href="#" class="contact-form__link">Política de privacidad</a>
+                  <a href="#" class="contact-form__link">Terminos y condiciones</a>
+                </div>
+
+              <button type="submit" class="contact-form__btn">Enviar</button>
+
+            </div>
+
+          </form>
+            </section>
+
+    </main>
 
     <!--FOOTER-->
     <footer class="footer">
