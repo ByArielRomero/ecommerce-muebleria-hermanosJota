@@ -765,8 +765,34 @@ main {
 @media (min-width: 769px) {
   
   /*HEADER*/
-  
+  .header {
+    padding: 0;
+  }
 
+ul.navbar__list {
+  height: 100%;
+  align-items: center;
+}
+
+.navbar__list {
+  gap: 0;
+}
+
+.navbar__item a {
+  display: flex;
+  height: 120px;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navbar__item a:hover {
+  color: var(--color-premium);
+}
+
+div.navbar__carrito:hover {
+  color: var(--color-acento);
+  cursor: pointer;
+}
 
 
 
