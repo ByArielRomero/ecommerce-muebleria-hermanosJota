@@ -210,14 +210,18 @@ img {
   gap: 2rem;
 }
 
+.navbar__list a{
+  color: var(--color-primario);
+  font-weight: bold;
+}
+
 .navbar__link {
   color: black;
   font-weight: 500;
 }
 
-.navbar__link--active {
+.navbar__list a.navbar__link--active {
   color: var(--color-acento);
-  font-weight: 500;
 }
 
 .navbar__carrito {
@@ -789,7 +793,7 @@ ul.navbar__list {
   color: var(--color-premium);
 }
 
-div.navbar__carrito:hover {
+div.navbar__carrito:hover, div.navbar__buscador:hover {
   color: var(--color-acento);
   cursor: pointer;
 }
