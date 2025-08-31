@@ -131,10 +131,48 @@ img {
 ================================= */
 
 main {
-  height: 50vh;
+  display: 1;
+}
+/* Contenedor de Producto*/
+.container-producto{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+/* Los contenedores consiguientes de imagen y descripcion*/
+.imagen-producto, .detalle-producto{
+  flex: 1 1 400px;
+  min-width: 200px;
+  /*background-color: #1a1a1a; Guia de caja */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* Contenedor final */
+.descripcion-producto{
+  display: flex;
 }
 
-
+.imagen-producto img{
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.detalle-producto h3{
+  text-align: center;
+  margin-top: 20px;
+}
+.detalle-producto p{
+  text-align: justify;
+  margin: 10px 20px 10px;
+}
+.detalle-producto .botones{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: auto;
+}
 
 
 /* ===============================
