@@ -26,38 +26,62 @@
         <nav class="navbar">
           <ul class="navbar__list">
             <li class="navbar__item">
-              <a
-                href="./index.html"
-                class="navbar__link"
-                >Inicio</a
-              >
+              <a href="./index.html" class="navbar__link--active">Inicio</a>
             </li>
             <li class="navbar__item">
               <a href="./productos.html" class="navbar__link">Productos</a>
             </li>
             <li class="navbar__item">
-              <a href="./contacto.html" class="navbar__link--active">Contacto</a>
+              <a href="./contacto.html" class="navbar__link">Contacto</a>
+            </li>
+
+             <li class="navbar__item">
+              <a href="./contacto.html" class="navbar__link"> <i class="fa-solid fa-cart-shopping"></i></a>
+              <span class="header__carrito-contador">0</span>
+            </li>
+
+             <li class="navbar__item">
+              <a href="./contacto.html" class="navbar__link"> 
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
             </li>
           </ul>
-          <div class="navbar__carrito">
-            <a class="navbar__carrito-btn" aria-label="Ver carrito de compras">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <span class="header__carrito-contador">0</span>
-            </a>
-          </div>
-
-          <!-- Buscador -->
-          <div class="navbar__buscador">
-            <a class="navbar__buscador-btn" aria-label="Buscar productos">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-          </div>
         </nav>
       </div>
     </header>
 
     <!--MAIN-->
-    <main></main>
+    <main>
+
+      <section class="contact-form-section">
+        <form action="https://formspree.io/f/mrbaqlrd" method="POST" class="contact-form">
+
+            <h2 class="contact-form__title">Contactanos</h2>
+
+            <div class="contact-form__group">
+
+            <label for="name" class="contact-form__label">Nombre</label>
+            <input type="text" name="name" id="name" placeholder="Nombre..." class="contact-form__input">
+
+            <label for="email" class="contact-form__label">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email..." class="contact-form__input">
+
+            <label for="mensaje" class="contact-form__label">Mensaje</label>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Mensaje..." class="contact-form__textarea"></textarea>
+
+                <div class="contact-form__txt">
+                  <a href="#" class="contact-form__link">Política de privacidad</a>
+                  <a href="#" class="contact-form__link">Terminos y condiciones</a>
+                </div>
+
+              <button type="submit" class="contact-form__btn">Enviar</button>
+
+            </div>
+
+          </form>
+            </section>
+
+    </main>
 
     <!--FOOTER-->
     <footer class="footer">
