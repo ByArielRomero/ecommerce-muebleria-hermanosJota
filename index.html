@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
@@ -26,11 +26,7 @@
         <nav class="navbar">
           <ul class="navbar__list">
             <li class="navbar__item">
-              <a
-                href="./index.html"
-                class="navbar__link--active"
-                >Inicio</a
-              >
+              <a href="./index.html" class="navbar__link--active">Inicio</a>
             </li>
             <li class="navbar__item">
               <a href="./productos.html" class="navbar__link">Productos</a>
@@ -38,20 +34,20 @@
             <li class="navbar__item">
               <a href="./contacto.html" class="navbar__link">Contacto</a>
             </li>
-          </ul>
-          <div class="navbar__carrito">
-            <a class="navbar__carrito-btn" aria-label="Ver carrito de compras">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <span class="header__carrito-contador">0</span>
-            </a>
-          </div>
 
-          <!-- Buscador -->
-          <div class="navbar__buscador">
-            <a class="navbar__buscador-btn" aria-label="Buscar productos">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-          </div>
+            <li class="navbar__item">
+              <a href="./contacto.html" class="navbar__link">
+                <i class="fa-solid fa-cart-shopping"></i
+              ></a>
+              <span class="header__carrito-contador">0</span>
+            </li>
+
+            <li class="navbar__item">
+              <a href="./contacto.html" class="navbar__link">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -63,9 +59,7 @@
         <div class="hero__container container">
           <div class="hero__content">
             <h1 class="hero__title">Hermanos Jota</h1>
-            <p class="hero__subtitle">
-              Muebles de calidad para tu hogar
-            </p>
+            <p class="hero__subtitle">Muebles de calidad para tu hogar</p>
             <a href="./productos.html" class="hero__btn">Ver Productos</a>
           </div>
           <div class="hero__image">
@@ -77,44 +71,56 @@
           </div>
         </div>
       </section>
-      
+
       <!--SECCION PRODUCTOS DESTACADOS-->
       <section class="productos-destacados">
         <div class="productos-destacados__container container">
-          <h2 class="productos-destacados__title">Productos Destacados</h2>
+          <h2 class="productos__title">Productos Destacados</h2>
           <div class="productos-destacados__grid">
-            <article class="producto-card">
-              <img
-                src="./assets/img/Sofа Patagonia.png"
-                alt="Sofá moderno"
-                class="producto-card__img"
-              />
+            <!-- Producto 1 -->
+            <article class="producto-card producto-card--destacado">
+              <a href="producto.html">
+                <img
+                  src="./assets/img/Sofа Patagonia.png"
+                  alt="Sofá moderno"
+                  class="producto-card__img"
+                />
+              </a>
               <h3 class="producto-card__title">Sofá Moderno</h3>
               <p class="producto-card__price">$25,000</p>
               <a href="#" class="producto-card__btn">Agregar al carrito</a>
             </article>
 
-            <article class="producto-card">
-              <img
-                src="./assets/img/Mesa Comedor Pampa.png"
-                alt="Mesa de comedor"
-                class="producto-card__img"
-              />
+            <!-- Producto 2 -->
+            <article class="producto-card producto-card--destacado">
+              <a href="producto.html">
+                <img
+                  src="./assets/img/Mesa Comedor Pampa.png"
+                  alt="Mesa de comedor"
+                  class="producto-card__img"
+                />
+              </a>
               <h3 class="producto-card__title">Mesa de Comedor</h3>
               <p class="producto-card__price">$15,000</p>
               <a href="#" class="producto-card__btn">Agregar al carrito</a>
             </article>
 
-            <article class="producto-card">
-              <img
-                src="./assets/img/Silla de Trabajo Belgrano.png"
-                alt="Silla ergonómica"
-                class="producto-card__img"
-              />
+            <!-- Producto 3 -->
+            <article class="producto-card producto-card--destacado">
+              <a href="producto.html">
+                <img
+                  src="./assets/img/Silla de Trabajo Belgrano.png"
+                  alt="Silla ergonómica"
+                  class="producto-card__img"
+                />
+              </a>
               <h3 class="producto-card__title">Silla Ergonómica</h3>
               <p class="producto-card__price">$8,000</p>
               <a href="#" class="producto-card__btn">Agregar al carrito</a>
             </article>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!--FOOTER-->

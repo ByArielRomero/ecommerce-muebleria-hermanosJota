@@ -26,32 +26,26 @@
         <nav class="navbar">
           <ul class="navbar__list">
             <li class="navbar__item">
-              <a
-                href="./index.html"
-                class="navbar__link"
-                >Inicio</a
-              >
+              <a href="./index.html" class="navbar__link--active">Inicio</a>
             </li>
             <li class="navbar__item">
               <a href="./productos.html" class="navbar__link">Productos</a>
             </li>
             <li class="navbar__item">
-              <a href="./contacto.html" class="navbar__link--active">Contacto</a>
+              <a href="./contacto.html" class="navbar__link">Contacto</a>
+            </li>
+
+             <li class="navbar__item">
+              <a href="./contacto.html" class="navbar__link"> <i class="fa-solid fa-cart-shopping"></i></a>
+              <span class="header__carrito-contador">0</span>
+            </li>
+
+             <li class="navbar__item">
+              <a href="./contacto.html" class="navbar__link"> 
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
             </li>
           </ul>
-          <div class="navbar__carrito">
-            <a class="navbar__carrito-btn" aria-label="Ver carrito de compras">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <span class="header__carrito-contador">0</span>
-            </a>
-          </div>
-
-          <!-- Buscador -->
-          <div class="navbar__buscador">
-            <a class="navbar__buscador-btn" aria-label="Buscar productos">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-          </div>
         </nav>
       </div>
     </header>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
@@ -26,38 +26,76 @@
         <nav class="navbar">
           <ul class="navbar__list">
             <li class="navbar__item">
-              <a
-                href="./index.html"
-                class="navbar__link--active navbar__link"
-                >Inicio</a
-              >
+              <a href="./index.html" class="navbar__link--active">Inicio</a>
             </li>
             <li class="navbar__item">
-              <a href="./productos.html" class="navbar__link--active">Productos</a>
+              <a href="./productos.html" class="navbar__link">Productos</a>
             </li>
             <li class="navbar__item">
               <a href="./contacto.html" class="navbar__link">Contacto</a>
             </li>
-          </ul>
-          <div class="navbar__carrito">
-            <a class="navbar__carrito-btn" aria-label="Ver carrito de compras">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <span class="header__carrito-contador">0</span>
-            </a>
-          </div>
 
-          <!-- Buscador -->
-          <div class="navbar__buscador">
-            <a class="navbar__buscador-btn" aria-label="Buscar productos">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-          </div>
+            <li class="navbar__item">
+              <a href="./contacto.html" class="navbar__link">
+                <i class="fa-solid fa-cart-shopping"></i
+              ></a>
+              <span class="header__carrito-contador">0</span>
+            </li>
+
+            <li class="navbar__item">
+              <a href="./contacto.html" class="navbar__link">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
 
     <!--MAIN-->
-    <main></main>
+    <main>
+      <div class="container-producto">
+        <div class="imagen-producto">
+          <img src="assets/img/Aparador Uspallata.png" alt="Aparador" />
+        </div>
+        <div class="detalle-producto">
+          <h2>aparador uspallata</h2>
+          <h3>$10,00</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+            voluptates velit quos quasi et impedit expedita cupiditate saepe hic
+            suscipit maiores inventore ab pariatur, nobis veniam iure culpa amet
+            quo?
+          </p>
+          <div class="botones">
+            <button type="submit" class="btn__comprar">Comprar</button>
+            <button type="submit" class="producto-card__btn">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+        <section class="descripcion-producto">
+          <div>
+            <h2>Ficha</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam,
+              iste? Modi inventore voluptatibus voluptatum voluptatem
+              consequuntur, quod alias consect etur, quidem ab autem voluptas
+              quam deserunt aliquid labore eligendi natus dolorem!
+            </p>
+          </div>
+          <div>
+            <h2>Garantia</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptatibus iure, quisquam ipsum culpa quibusdam et quasi, qui
+              corporis pariatur suscipit, id molestias voluptate beatae eaque at
+              a repudiandae veniam? Velit!
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
 
     <!--FOOTER-->
     <footer class="footer">
