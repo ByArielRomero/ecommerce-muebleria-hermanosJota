@@ -270,12 +270,15 @@ img {
 
 /* FORMULARIO DE CONTACTO */
 
+/* FORMULARIO DE CONTACTO */
+
 .contact-form {
   padding: 50px 55px;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
   border-radius: 20px;
   text-align: center;
   width: 100%;
+  max-width: 600px;
   background-color: white;
 }
 
@@ -291,10 +294,31 @@ img {
 }
 
 .contact-form__label {
-  color: var(--color-suave);
+  color: var(--color-suave, #555);
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 0.5rem;
+}
+
+.contact-form__group p {
+  visibility: hidden;
+  color: red;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.falla .contact-form__input,
+.falla .contact-form__textarea {
+  border-color: red;
+}
+
+.correcta .contact-form__input,
+.correcta .contact-form__textarea {
+  border-color: green;
+}
+
+.falla p {
+  visibility: visible;
 }
 
 .contact-form__input,
@@ -325,21 +349,32 @@ img {
 .contact-form-section {
   display: flex;
   justify-content: center;
+  padding: 50px 20px;
 }
 
 .contact-form__btn {
   cursor: pointer; 
-  background-color: var(--color-acento);
+  background-color: var(--color-acento, #76b28e);
   border: none;
   color: white;
+  font-weight: bold;
+}
+
+.contact-form__btn:hover {
+  background-color: var(--color-premium, #5e9f7e);
 }
 
 .contact-form__textarea {
   resize: none;
 }
 
-.contact-form__btn:hover {
-  background-color: var(--color-premium);
+/* Éxito */
+.contact-form__success {
+  display: none;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1em;
 }
 
 /* FORMULARIO DE CONTACTO */
