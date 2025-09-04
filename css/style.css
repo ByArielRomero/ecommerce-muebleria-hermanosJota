@@ -123,13 +123,30 @@ img {
 .navbar__list a{
   color: var(--color-primario);
   font-weight: bold;
+
 }
 
-.navbar__link--active {
+
+
+.navbar__link {
+  color: black;
+  font-weight: 500;
+
+}
+
+
+
+.navbar__list a.navbar__link--active {
   color: var(--color-acento);
+
 }
 
 
+
+.navbar__carrito {
+  margin: 1rem;
+
+}
 
 /* ===============================
    HERO / BANNER (MÓVIL)
@@ -691,10 +708,50 @@ main {
 }
 
 
-.footer__redes-sociales {
+
+/* ===============================
+   MEDIA QUERIES
+================================= */
+
+@media (min-width: 769px) {
+  
+  /*HEADER*/
+  .header {
+    padding: 0;
+  }
+
+ul.navbar__list {
+  height: 100%;
+  align-items: center;
+}
+
+.navbar__list {
+  gap: 0;
+}
+
+.navbar__item a {
+  display: flex;
+  height: 120px;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navbar__item a:hover {
+  color: var(--color-premium);
+}
+
+div.navbar__carrito:hover, div.navbar__buscador:hover {
+  color: var(--color-acento);
+  cursor: pointer;
+}
+
+
+
+
+  .footer__redes-sociales {
   display: flex;
   justify-content: center;
-
+  
 }
 
 
