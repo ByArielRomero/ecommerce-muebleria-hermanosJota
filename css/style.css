@@ -172,6 +172,7 @@ img {
   line-height: 1.1;
   letter-spacing: 0.03em;
   text-shadow: 0 2px 8px #fffbe9;
+  text-align: left;
 }
 
 .hero__subtitle {
