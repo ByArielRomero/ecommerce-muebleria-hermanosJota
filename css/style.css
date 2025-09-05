@@ -1,5 +1,6 @@
 /* ===============================
    VARIABLES DE COLOR Y TIPOGRAFÍA
+   Definición de colores y fuentes globales para el sitio
 ================================= */
 :root {
   /* Colores */
@@ -16,6 +17,7 @@
 
 /* ===============================
    ESTILOS GENERALES (MÓVIL)
+   Reset y estilos base para todos los elementos
 ================================= */
 * {
   margin: 0;
@@ -61,9 +63,9 @@ img {
 }
 
 /* ===============================
-   BTN-
+   BOTONES DE COMPRA
+   Estilos para botones principales de acción
 ================================= */
-
 .btn__comprar {
   display: inline-block;
   padding: 0.7rem 1.2rem;
@@ -87,6 +89,7 @@ img {
 
 /* ===============================
    HEADER Y NAVBAR (MÓVIL)
+   Encabezado y barra de navegación principal
 ================================= */
 .header {
   background-color: var(--color-base);
@@ -140,6 +143,7 @@ img {
 
 /* ===============================
    HERO / BANNER (MÓVIL)
+   Sección principal de bienvenida y promoción
 ================================= */
 .hero {
   width: 100%;
@@ -272,10 +276,10 @@ img {
   box-shadow: 0 12px 40px rgba(160, 82, 45, 0.18);
 }
 
-/* FORMULARIO DE CONTACTO */
-
-/* FORMULARIO DE CONTACTO */
-
+/* ===============================
+   FORMULARIO DE CONTACTO
+   Estilos para el formulario de contacto y validaciones
+================================= */
 .contact-form {
   padding: 50px 55px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -382,84 +386,10 @@ img {
   margin-top: 1em;
 }
 
-/* FORMULARIO DE CONTACTO */
-
-.contact-form {
-  padding: 50px 55px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  text-align: center;
-  width: 100%;
-  background-color: white;
-}
-
-.contact-form__group {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.contact-form__title {
-  font-size: 35px;
-  padding-bottom: 1em;
-}
-
-.contact-form__label {
-  color: var(--color-suave);
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.contact-form__input,
-.contact-form__textarea,
-.contact-form__btn {
-  padding: 17px 25px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  background-color: #f3f4f6;
-  border: 2px solid #f0faf1;
-  color: #000000;
-  outline: none;
-}
-
-.contact-form__txt {
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.contact-form__link {
-  color: #76b28e;
-  font-size: 10px;
-  font-weight: 600;
-}
-
-.contact-form-section {
-  display: flex;
-  justify-content: center;
-}
-
-.contact-form__btn {
-  cursor: pointer;
-  background-color: var(--color-acento);
-  border: none;
-  color: white;
-}
-
-.contact-form__textarea {
-  resize: none;
-}
-
-.contact-form__btn:hover {
-  background-color: var(--color-premium);
-}
-
 /* ===============================
    PRODUCTOS DESTACADOS (MÓVIL)
+   Tarjetas y grillas para productos destacados
 ================================= */
-
 .productos__title {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -566,8 +496,8 @@ img {
 
 /* ===============================
    MAIN
+   Estructura principal y detalle de productos
 ================================= */
-
 main {
   display: 1;
   margin-bottom: 10rem;
@@ -665,7 +595,121 @@ main {
 }
 
 /* ===============================
+   PAGINACIÓN
+   Estilos para la barra de paginación de productos
+================================= */
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem 0 1rem 0;
+}
+
+.paginacion button {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  background: var(--color-base);
+  color: var(--color-primario);
+  border: 1px solid var(--color-acento);
+  border-radius: 18px;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(160, 82, 45, 0.08);
+}
+
+.paginacion button.activo {
+  background: linear-gradient(90deg, var(--color-premium), var(--color-acento));
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 4px 16px rgba(160, 82, 45, 0.18);
+  border: 1.5px solid var(--color-premium);
+}
+
+.paginacion button:disabled {
+  background: #eee;
+  color: #bbb;
+  cursor: not-allowed;
+  border: 1px solid #ddd;
+}
+
+.paginacion button:hover:not(:disabled),
+.paginacion button:focus:not(:disabled) {
+  background: var(--color-acento);
+  color: #fff;
+  box-shadow: 0 2px 16px rgba(135, 169, 107, 0.18);
+  border: 1.5px solid var(--color-acento);
+}
+
+/* ===============================
+   MODAL BUSCADOR
+   Estilos para el modal de búsqueda global
+================================= */
+.modal-buscador {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-buscador__content {
+  background: var(--color-base);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(160, 82, 45, 0.18);
+  padding: 2.2rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.modal-buscador__content input[type="search"] {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 12px;
+  border: 1.5px solid var(--color-acento);
+  outline: none;
+  width: 260px;
+  background: #fff;
+  color: var(--color-primario);
+  box-shadow: 0 2px 8px rgba(160, 82, 45, 0.08);
+}
+
+.modal-buscador__content input[type="search"]:focus {
+  border-color: var(--color-premium);
+  box-shadow: 0 4px 16px rgba(212, 164, 55, 0.18);
+}
+
+.modal-buscador__cerrar {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: var(--color-acento);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.modal-buscador__cerrar:hover,
+.modal-buscador__cerrar:focus {
+  background: var(--color-premium);
+  color: var(--color-primario);
+}
+
+/* ===============================
    FOOTER (MÓVIL)
+   Pie de página y secciones informativas
 ================================= */
 .footer {
   background-color: var(--color-base);
@@ -757,9 +801,9 @@ main {
 }
 
 /* ===============================
-   MEDIA QUERIES
+   MEDIA QUERIES (Desktop)
+   Adaptaciones para pantallas grandes
 ================================= */
-
 @media (min-width: 769px) {
   /*HEADER*/
   .header {
@@ -804,6 +848,7 @@ main {
 
 /* ===============================
    MEDIA QUERIES (Tablet/PC)
+   Adaptaciones para pantallas medianas y grandes
 ================================= */
 @media (min-width: 601px) {
   .header__logo {
