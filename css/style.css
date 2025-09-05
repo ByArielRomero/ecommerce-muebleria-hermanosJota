@@ -308,7 +308,8 @@ img {
   visibility: hidden;
   color: red;
   font-size: 0.9em;
-  margin: 0;
+  margin-top: -20px;
+  margin-bottom: 20px;
 }
 
 .falla .contact-form__input,
