@@ -71,7 +71,7 @@ export const productos = [
  */
 export async function cargarProductos() {
   // Simula una carga asíncrona
-  await new Promise(res => setTimeout(res, 1500)); 
+  await new Promise(res => setTimeout(res, 250)); 
 
   if (productos.length > 0) {
     return productos;
