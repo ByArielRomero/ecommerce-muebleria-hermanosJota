@@ -1,3 +1,5 @@
+import { inicializarCarrito } from "./carrito.js";
+
 /* VALIDACION DE FORMULARIO */
 
 
@@ -81,3 +83,6 @@ window.addEventListener("load", () => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 });
+
+ // inicializo el carrito
+  inicializarCarrito();
