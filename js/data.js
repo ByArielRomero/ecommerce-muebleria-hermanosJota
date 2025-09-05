@@ -1,24 +1,31 @@
+// =============================
+// DATOS Y FUNCIONES DE PRODUCTOS
+// =============================
+
+// IDs de productos destacados
+export const destacadosIds = [1, 2, 3];
+// Array de productos disponibles en la tienda
 export const productos = [
   {
     id: 1,
     name: 'Mesa de Centro',
     price: 8000,
     description: 'Mesa de centro',
-    image: './assets/img/Mesa de Centro Araucaria.png',
+    image: './assets/img/Mesa de Centro Araucaria.png'
   },
   {
     id: 2,
     name: 'Sillón Copacabana',
     price: 8000,
     description: 'Sillón Copacabana',
-    image: './assets/img/Sillвn Copacabana.png',
+    image: './assets/img/Sillвn Copacabana.png'
   },
   {
     id: 3,
     name: 'Sofá Moderno',
     price: 25000,
     description: 'Sofá moderno',
-    image: './assets/img/Sofа Patagonia.png',
+    image: './assets/img/Sofа Patagonia.png'
   },
   {
     id: 4,
@@ -58,6 +65,10 @@ export const productos = [
 ];
 
 
+/**
+ * Simula la carga asíncrona de productos
+ * @returns {Promise<Array>} - Devuelve el array de productos
+ */
 export async function cargarProductos() {
   // Simula una carga asíncrona
   await new Promise(res => setTimeout(res, 1500)); 
