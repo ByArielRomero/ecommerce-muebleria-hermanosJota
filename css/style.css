@@ -147,7 +147,7 @@ img {
 ================================= */
 .hero {
   width: 100%;
-  min-height: 180px;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -166,6 +166,7 @@ img {
   text-align: center;
   width: 100%;
   height: auto;
+  margin-top: 2.6rem;
 }
 
 .hero__content {
@@ -183,7 +184,7 @@ img {
   line-height: 1.1;
   letter-spacing: 0.03em;
   text-shadow: 0 2px 8px #fffbe9;
-  text-align: left;
+  text-align: center;
 }
 
 .hero__subtitle {
@@ -567,6 +568,10 @@ main {
   padding: 1rem;
 }
 
+.descripcion-producto__garantia {
+  text-align: center;
+}
+
 .destacado-card:hover::after,
 .destacado-card:focus-within::after,
 .producto-card:hover::after,
@@ -855,6 +860,10 @@ main {
     width: 120px;
   }
 
+  .hero__title {
+    text-align: left;
+  }
+
   .navbar__list {
     flex-direction: row;
     gap: 2rem;
@@ -867,12 +876,14 @@ main {
     min-height: 70vh;
     flex-direction: row;
     padding: 0;
+    margin: 0;
   }
   .hero__container {
     grid-template-columns: 1.1fr 1fr;
     gap: 0;
     height: 100%;
     text-align: left;
+    margin-top: 0;
   }
   .hero__content {
     max-width: 520px;
