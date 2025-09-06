@@ -1,9 +1,13 @@
+<!-- =============================
+  PÁGINA DE DETALLE DE PRODUCTO
+  Hermanos Jota - Mueblería
+============================= -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
@@ -12,7 +16,9 @@
     <title>Producto</title>
   </head>
   <body>
-    <!--HEADER-->
+    <!-- =============================
+      HEADER Y NAVEGACIÓN
+    ============================= -->
     <header class="header">
       <div class="header__container container">
         <div class="header__logo">
@@ -26,42 +32,92 @@
         <nav class="navbar">
           <ul class="navbar__list">
             <li class="navbar__item">
-              <a
-                href="./index.html"
-                class="navbar__link--active navbar__link"
-                >Inicio</a
-              >
+              <a href="./index.html" class="navbar__link">Inicio</a>
             </li>
             <li class="navbar__item">
-              <a href="./productos.html" class="navbar__link--active">Productos</a>
+              <a href="./productos.html" class="navbar__link--active"">Productos</a>
             </li>
             <li class="navbar__item">
               <a href="./contacto.html" class="navbar__link">Contacto</a>
             </li>
-          </ul>
-          <div class="navbar__carrito">
-            <a class="navbar__carrito-btn" aria-label="Ver carrito de compras">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <span class="header__carrito-contador">0</span>
-            </a>
-          </div>
 
-          <!-- Buscador -->
-          <div class="navbar__buscador">
-            <a class="navbar__buscador-btn" aria-label="Buscar productos">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-          </div>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link">
+                <i class="fa-solid fa-cart-shopping"></i
+              ></a>
+              <span class="header__carrito-contador">0</span>
+            </li>
+
+            <li class="navbar__item">
+              <a href="#" class="navbar__link">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
 
-    <!--MAIN-->
-    <main></main>
+    <!-- =============================
+      CONTENIDO PRINCIPAL
+    ============================= -->
+    <main>
+   <!-- =============================
+     SECCIÓN DETALLE DE PRODUCTO
+   ============================= -->
+   <div class="container-producto">
+        <div class="imagen-producto">
+          <img src="assets/img/Aparador Uspallata.png" alt="Aparador" />
+        </div>
+        <div class="detalle-producto">
+          <h2>aparador uspallata</h2>
+          <h3>$10,00</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+            voluptates velit quos quasi et impedit expedita cupiditate saepe hic
+            suscipit maiores inventore ab pariatur, nobis veniam iure culpa amet
+            quo?
+          </p>
+          <div class="botones">
+            <button type="submit" class="btn__comprar">Comprar</button>
+            <button type="submit" class="producto-card__btn">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+     <!-- =============================
+       FICHA Y GARANTÍA DEL PRODUCTO
+     ============================= -->
+     <section class="descripcion-producto">
+          <div>
+            <h2>Ficha</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam,
+              iste? Modi inventore voluptatibus voluptatum voluptatem
+              consequuntur, quod alias consect etur, quidem ab autem voluptas
+              quam deserunt aliquid labore eligendi natus dolorem!
+            </p>
+          </div>
+          <div>
+            <h2>Garantia</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptatibus iure, quisquam ipsum culpa quibusdam et quasi, qui
+              corporis pariatur suscipit, id molestias voluptate beatae eaque at
+              a repudiandae veniam? Velit!
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
 
-    <!--FOOTER-->
+    <!-- =============================
+      PIE DE PÁGINA / FOOTER
+    ============================= -->
     <footer class="footer">
-      <!--NEWSLETTER CORREO-->
+   <!-- =============================
+     NEWSLETTER CORREO
+   ============================= -->
       <div class="footer__info">
         <h2 class="footer__title">Newsletter</h2>
         <p>
@@ -77,7 +133,9 @@
         </form>
       </div>
 
-      <!--CATEGORIAS, AYUDA Y CONTACTO-->
+   <!-- =============================
+     CATEGORÍAS, AYUDA Y CONTACTO
+   ============================= -->
       <div class="footer__container container">
         <div class="footer__categorias">
           <h2>Categorias</h2>
@@ -132,10 +190,18 @@
             <li class="footer__item">
               <a class="footer__link" href="#">ventas@hermanosjota.com.ar</a>
             </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Av. San Juan 2847
+C1232AAB — Barrio de San Cristóbal
+Ciudad Autónoma de Buenos Aires
+Argentina</a>
+            </li>
           </ul>
         </div>
       </div>
-      <!-- FOOTER REDES SOCIALES -->
+   <!-- =============================
+     REDES SOCIALES FOOTER
+   ============================= -->
       <div class="footer__redes-sociales">
         <a
           href="https://www.facebook.com/HermanosJotaMuebleria"
@@ -159,5 +225,6 @@
         <p>© 2025 Hermanos Jota. Todos los derechos reservados.</p>
       </div>
     </footer>
+        <script type="module" src="./js/app.js"></script>
   </body>
 </html>
