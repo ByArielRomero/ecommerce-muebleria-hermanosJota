@@ -90,7 +90,7 @@ ecommerce-muebleria-hermanosJota/
 
 | Inicio | Productos Destacados | Catálogo | Detalle de Producto | Formulario | Modal de Búsqueda |
 |--------|---------------------|----------|---------------------|------------|-------------------|
-| ![](assets/screenshots/Inicio.png) | ![](assets/screenshots/ProductosDestacados.png) | ![](assets/screenshots/Catalogo.png) | ![](assets/screenshots/DetalleProducto.png) | ![](assets/screenshots/Formulario.png) | ![](assets/img/ModalBusqueda) |
+| ![](assets/screenshots/Inicio.png) | ![](assets/screenshots/ProductosDestacados.png) | ![](assets/screenshots/Catalogo.png) | ![](assets/screenshots/DetalleProducto.png) | ![](assets/screenshots/Formulario.png) | ![](assets/screenshots/ModalBusqueda) |
 
 ---
 
