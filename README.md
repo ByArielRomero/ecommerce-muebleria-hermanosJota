@@ -69,6 +69,8 @@ ecommerce-muebleria-hermanosJota/
 
 ## 🧑‍💻 Instalación y uso
 
+¡Explora la tienda en línea **[aquí](https://byarielromero.github.io/ecommerce-muebleria-hermanosJota/index.html)**! Si deseas ver el código e instalar el proyecto, sigue los siguientes pasos:
+
 1. **Clona el repositorio:**
    ```bash
    git clone https://github.com/ByArielRomero/ecommerce-muebleria-hermanosJota.git
