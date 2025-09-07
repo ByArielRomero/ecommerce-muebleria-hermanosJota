@@ -9,7 +9,7 @@ Este proyecto es una tienda online de muebles, desarrollada con HTML, CSS y Java
 
 - 🔍 **Buscador global:** Modal de búsqueda en todas las páginas, con filtrado en tiempo real y acceso directo al detalle de producto.
 - 🛋️ **Catálogo dinámico:** Renderizado de productos y destacados desde un array, con paginación y filtrado.
-- 🛒 **Carrito de compras:** Contador visual, persistencia con localStorage y mensajes de confirmación.
+- 🛒 **Carrito de compras:** Contador visual, persistencia con localStorage.
 - 📄 **Detalle de producto:** Página individual con información ampliada y botones de acción.
 - 📬 **Formulario de contacto:** Validación de campos y mensajes de éxito/error.
 - 🎨 **Estilos modernos:** Variables CSS, diseño responsive y animaciones sutiles.
@@ -50,6 +50,7 @@ ecommerce-muebleria-hermanosJota/
 │
 ├── assets/
 │   └── img/         # Imágenes de productos y logotipo
+│   └── screenshots/ # Capturas de pantalla para visualizacion en el README
 │
 ├── css/
 │   └── style.css    # Estilos principales
