@@ -16,6 +16,20 @@ Este proyecto es un e-commerce para Mueblería Hermanos Jota, desarrollada con H
 - JavaScript (DOM, eventos, async)
 - Git & GitHub
 
+  <img width="1366" height="642" alt="image" src="https://github.com/user-attachments/assets/c65f2b89-b4d7-4497-ad97-521bd96a57fc" />
+
+<br>
+
+<img width="1366" height="642" alt="image" src="https://github.com/user-attachments/assets/6615fed1-4d5f-4e47-8b4f-60b14e541a47">
+
+<br>
+
+<img width="1366" height="642" alt="image" src="https://github.com/user-attachments/assets/d3494a12-01ce-4393-8fd0-0ff76166e866" />
+<br>
+<img width="1366" height="642" alt="image" src="https://github.com/user-attachments/assets/05cf5101-a5f4-4b9c-b1f8-991d14295fe2" />
+
+
+
 
 ## 🎯 Sprints
 - Sprint 1: estructura HTML + CSS (responsivo, navegación).
