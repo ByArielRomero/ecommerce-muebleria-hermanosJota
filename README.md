@@ -1,3 +1,4 @@
+
 # 🛒 Mueblería Hermanos Jota
 
 ¡Bienvenido al repositorio de **Ecommerce Mueblería Hermanos Jota**!  
@@ -119,3 +120,6 @@ Puedes adaptarlo y mejorarlo libremente.
 ---
 
 ### ¡Gracias por visitar nuestra tienda! 🪑✨
+=======
+<h1 align="center">E-Commerce Muebleria Hermanos Jota</h1>
+

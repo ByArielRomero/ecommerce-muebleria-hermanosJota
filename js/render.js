@@ -98,6 +98,8 @@ export async function renderizarDetalleProducto(id) {
       document.querySelector(".detalle-producto h2").textContent = producto.name;
       document.querySelector(".detalle-producto h3").textContent = `$${producto.price.toLocaleString()}`;
       document.querySelector(".detalle-producto p").textContent = producto.description;
+      document.querySelector(".descripcion-producto__ficha").textContent = producto.ficha;
+      document.querySelector(".descripcion-producto__garantia").textContent = producto.garantia;
     }
   } catch (error) {
     console.error("Error cargando detalle del producto", error);
